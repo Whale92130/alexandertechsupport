@@ -31,3 +31,6 @@
 .action-note{display:block;font-size:1.125rem;font-weight:400;line-height:1.5;color:#4d5961;margin-top:8px}
 @media(max-width:760px){.home-dashboard{padding-block:24px 32px}.home-dashboard>.visit-panel{grid-template-columns:1fr;gap:20px;padding:20px}.home-dashboard .panel-label{margin-bottom:0}.home-dashboard .visit-panel .button{width:100%}.home-actions{gap:16px}.home-action{min-height:136px;padding:20px;flex-direction:column;align-items:flex-start;gap:12px;font-size:1.25rem}.action-note{font-size:1rem}}
 @media(max-width:420px){.home-actions{grid-template-columns:1fr}.home-action{flex-direction:row;align-items:center;min-height:100px}}
+
+.action-note svg{display:inline-block;vertical-align:-.15em;margin-left:6px}
+@media(max-width:760px){.header-inner{align-items:center;justify-content:center;padding-block:24px;gap:0}.brand{flex-direction:column;text-align:center;width:100%;gap:12px;line-height:1.25}.brand-logo{width:88px;height:88px}}
