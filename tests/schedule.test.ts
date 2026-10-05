@@ -19,7 +19,7 @@ test("recurring visits respect exclusions, moved dates, cancellations, and the e
  assert.equal(visits[1].location,"Different room");
  assert.ok(!visits.some(v => v.start.includes("2026-10-18") || v.start.includes("2026-10-25")));
  assert.equal(visits[2].start,"2026-11-01T19:00:00.000Z");
- assert.equal(visitTime(visits[2]),"11:00 AM – 1:00 PM");
+ assert.equal(visitTime(visits[2]),"11:00 AM to 1:00 PM");
 });
 test("expired visits are removed without removing a visit currently in progress", () => {
  assert.equal(parseCalendarFeed(calendar(weekly),now)[0].start,"2026-10-04T18:00:00.000Z");

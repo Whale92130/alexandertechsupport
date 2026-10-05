@@ -6,5 +6,5 @@ export function visitDate(visit: Visit) { return new Intl.DateTimeFormat("en-US"
 export function visitTime(visit: Visit) {
  if (visit.allDay) return "All day";
  const f = new Intl.DateTimeFormat("en-US", { timeZone: TIME_ZONE, hour: "numeric", minute: "2-digit" });
- return f.format(new Date(visit.start)) + " – " + f.format(new Date(visit.end));
+ return f.format(new Date(visit.start)) + " to " + f.format(new Date(visit.end));
 }
