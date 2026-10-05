@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 import { EMAIL } from "@/lib/content";
 export function Header() {
  return <header className="site-header"><div className="container header-inner">
-  <a href="/" className="brand" aria-label="Alexander Tech Support home"><img className="brand-logo" src="/tech-support-logo.png" alt="" width={80} height={80} /><span>Alexander Tech Support</span></a>
+  <a href="/" className="brand" aria-label="Alexander Tech Support home"><img className="brand-logo" src="/favicon.png" alt="" width={80} height={80} /><span>Alexander Tech Support</span></a>
  </div></header>;
 }
 export function Footer() {
