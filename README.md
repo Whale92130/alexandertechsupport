@@ -21,6 +21,8 @@ If `GOOGLE_CALENDAR_API_KEY` is configured as a hosting secret, the endpoint use
 
 The support request button opens the existing Google Form in the same tab. Submission and response handling remain in Google Forms. /home redirects to /, and /support-form redirects to /get-help#request-help.
 
+Internal navigation uses ordinary HTML links. This keeps page changes and resource-section anchors working independently of the client router, including in the hosted production build.
+
 ## Checks
 
 ```sh

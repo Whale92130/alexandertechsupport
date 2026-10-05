@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { CalendarDays } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CALENDAR_URL, EMAIL } from "@/lib/content";
@@ -38,9 +37,9 @@ export function VisitPanel({ compact = false, primaryHeading = false }: { compac
  const Heading = primaryHeading ? "h1" : "h2";
  const DateHeading = primaryHeading ? "h2" : "h3";
  return <section className={"visit-panel " + (compact ? "compact" : "")} aria-labelledby="next-visit-heading">
-  <div className="panel-label"><CalendarDays size={25} aria-hidden="true" /><Heading id="next-visit-heading">Next visit with Alexander</Heading></div>
+  <div className="panel-label"><CalendarDays size={25} aria-hidden="true" /><Heading id="next-visit-heading">Next visit</Heading></div>
   <div aria-live="polite" aria-atomic="true">{visit ? <><DateHeading className="visit-date"><time dateTime={visit.start}>{visitDate(visit)}</time></DateHeading><p className="visit-time">{visitTime(visit)}</p><p className="visit-location">{visit.location || "Check the calendar for the location."}</p></> : <ScheduleStatus schedule={schedule} />}</div>
-  {compact && <Link className="button button-outline" href="/visit-schedule">View Visit Schedule</Link>}
+  {compact && <a className="button button-outline" href="/visit-schedule">View Visit Schedule</a>}
  </section>;
 }
 export function UpcomingVisits() {

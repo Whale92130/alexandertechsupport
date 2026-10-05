@@ -1,17 +1,16 @@
 "use client";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Mail } from "lucide-react";
 import { EMAIL, NAVIGATION } from "@/lib/content";
 function Navigation({ footer = false }: { footer?: boolean }) {
  const pathname = usePathname();
  return <nav className={footer ? "footer-nav" : "main-nav"} aria-label={footer ? "Footer navigation" : "Main navigation"}>
-  {NAVIGATION.map(({ href, label }) => <Link key={href} href={href} aria-current={pathname === href ? "page" : undefined}>{label}</Link>)}
+  {NAVIGATION.map(({ href, label }) => <a key={href} href={href} aria-current={pathname === href ? "page" : undefined}>{label}</a>)}
  </nav>;
 }
 export function Header() {
  return <header className="site-header"><div className="container header-inner">
-  <Link href="/" className="brand" aria-label="Alexander Tech Support home"><img className="brand-logo" src="/tech-support-logo.png" alt="" width={80} height={80} /><span>Alexander Tech Support</span></Link>
+  <a href="/" className="brand" aria-label="Alexander Tech Support home"><img className="brand-logo" src="/tech-support-logo.png" alt="" width={80} height={80} /><span>Alexander Tech Support</span></a>
   <Navigation />
  </div></header>;
 }
