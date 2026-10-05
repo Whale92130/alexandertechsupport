@@ -32,12 +32,14 @@ function ScheduleStatus({ schedule }: { schedule: ScheduleResult | null }) {
  if (!schedule) return <p className="schedule-loading" role="status">Checking the visit schedule…</p>;
  return <div className="status-message"><h3>{schedule.status === "unavailable" ? "The schedule is temporarily unavailable." : "No upcoming visits are listed."}</h3><p>Check the original calendar or email Alexander for visit details.</p><div className="panel-links"><a href={CALENDAR_URL}>Open Google Calendar</a><a href={"mailto:" + EMAIL}>Email Alexander</a></div></div>;
 }
-export function VisitPanel({ compact = false }: { compact?: boolean }) {
+export function VisitPanel({ compact = false, primaryHeading = false }: { compact?: boolean; primaryHeading?: boolean }) {
  const schedule = useSchedule();
  const visit = schedule?.visits[0];
+ const Heading = primaryHeading ? "h1" : "h2";
+ const DateHeading = primaryHeading ? "h2" : "h3";
  return <section className={"visit-panel " + (compact ? "compact" : "")} aria-labelledby="next-visit-heading">
-  <div className="panel-label"><CalendarDays size={25} aria-hidden="true" /><h2 id="next-visit-heading">Next visit with Alexander</h2></div>
-  <div aria-live="polite" aria-atomic="true">{visit ? <><h3 className="visit-date"><time dateTime={visit.start}>{visitDate(visit)}</time></h3><p className="visit-time">{visitTime(visit)}</p><p className="visit-location">{visit.location || "Check the calendar for the location."}</p></> : <ScheduleStatus schedule={schedule} />}</div>
+  <div className="panel-label"><CalendarDays size={25} aria-hidden="true" /><Heading id="next-visit-heading">Next visit with Alexander</Heading></div>
+  <div aria-live="polite" aria-atomic="true">{visit ? <><DateHeading className="visit-date"><time dateTime={visit.start}>{visitDate(visit)}</time></DateHeading><p className="visit-time">{visitTime(visit)}</p><p className="visit-location">{visit.location || "Check the calendar for the location."}</p></> : <ScheduleStatus schedule={schedule} />}</div>
   {compact && <Link className="button button-outline" href="/visit-schedule">View Visit Schedule</Link>}
  </section>;
 }
