@@ -11,9 +11,29 @@ export const NAVIGATION = [
  { href: "/visit-schedule", label: "Visit Schedule" }, { href: "/resources", label: "Resources & Classes" },
 ];
 export const CLASSES = [
- { title: "Tech Support Class — Week 1", url: "https://docs.google.com/presentation/d/1vQBNHToNi7mhCjrPOO621GqEYsXHOeYyqeNjQTTlxsE/present" },
- { title: "Tech Support Class — Week 2", url: "https://docs.google.com/presentation/d/1tzlEEMl66v80eJ7MFwSiRtb1KCdfx-YmGfnE0-EXEOM/present" },
- { title: "Tech Support Class — Week 3", url: "https://docs.google.com/presentation/d/1EetQqoH8mOfPAoi4pBY84bML2cEg5DJsmaB_1KzdKPI/present" },
- { title: "AI Scam Avoidance", url: "https://docs.google.com/presentation/d/1q6GfZyoerzlHpZio18pmMcE4wxXKSavZ_aEz5cEHu5w/present" },
- { title: "Virus Awareness", url: "https://docs.google.com/presentation/d/12jn6fEwuHQEKjKw05gkQGgfyRtFdVmXs7e2OgSRgsX4/present" },
+ {
+  title: "Tech Support Class — Week 1",
+  url: "https://docs.google.com/presentation/d/1vQBNHToNi7mhCjrPOO621GqEYsXHOeYyqeNjQTTlxsE/present?slide=id.g29e095bcfeb_0_0",
+  summary: "Learn everyday phone basics: adjust ring volume, use Do Not Disturb, connect to Wi-Fi and Bluetooth, check storage, and back up your photos.",
+ },
+ {
+  title: "Tech Support Class — Week 2",
+  url: "https://docs.google.com/presentation/d/1tzlEEMl66v80eJ7MFwSiRtb1KCdfx-YmGfnE0-EXEOM/present?slide=id.g29e095bcfeb_0_0",
+  summary: "Learn to download apps, search the web, and find verification codes sent by text or email. Includes an optional guide to creating a Facebook account.",
+ },
+ {
+  title: "Tech Support Class — Week 3",
+  url: "https://docs.google.com/presentation/d/1EetQqoH8mOfPAoi4pBY84bML2cEg5DJsmaB_1KzdKPI/present?slide=id.g29e095bcfeb_0_0",
+  summary: "Learn about avoiding phone viruses, uninstalling apps, and turning off app notifications. Review warning signs of text, email, phone, and AI scams.",
+ },
+ {
+  title: "AI Scam Avoidance",
+  url: "https://docs.google.com/presentation/d/1q6GfZyoerzlHpZio18pmMcE4wxXKSavZ_aEz5cEHu5w/present?slide=id.g29e095bcfeb_0_0",
+  summary: "Explore how scammers use AI to create fake images, videos, and messages. Learn about fake news, financial and romance scams, and ways to protect yourself.",
+ },
+ {
+  title: "Virus Awareness",
+  url: "https://docs.google.com/presentation/d/12jn6fEwuHQEKjKw05gkQGgfyRtFdVmXs7e2OgSRgsX4/present?slide=id.g29e095bcfeb_0_0",
+  summary: "Understand what phone viruses are, how phones get them, and how to avoid them. Review signs of a harmful app and steps for removing it.",
+ },
 ];

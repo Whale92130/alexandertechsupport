@@ -34,3 +34,9 @@
 
 .action-note svg{display:inline-block;vertical-align:-.15em;margin-left:6px}
 @media(max-width:760px){.header-inner{align-items:center;justify-content:center;padding-block:24px;gap:0}.brand{flex-direction:column;text-align:center;width:100%;gap:12px;line-height:1.25}.brand-logo{width:88px;height:88px}}
+
+.class-list{grid-template-columns:1fr}
+.class-list li{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:28px;align-items:start}
+.class-list h3{margin:0;font-size:1.25rem;line-height:1.5;letter-spacing:0}
+.class-list p{margin:0;font-size:1.25rem;max-width:65ch}
+@media(max-width:760px){.class-list li{grid-template-columns:1fr;gap:12px}}
