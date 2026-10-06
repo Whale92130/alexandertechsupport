@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { ArrowUpRight, BookOpen, MapPin, ShieldCheck } from "lucide-react";
 import { PageIntro } from "../page-intro";
+import { BackHome } from "../back-home";
 import { APP_URL, CLASSES } from "@/lib/content";
 export const metadata: Metadata = { title: "Resources & Classes", description: "Class presentations, San Diego library technology help, TruConnect, and Alex’s Phone Cleaner." };
 export default function Resources() {
  return <main id="main-content" tabIndex={-1}>
+  <BackHome />
   <PageIntro title="Resources & Classes" />
   <div className="container section content-stack">
    <section className="resource-section" id="class-materials" aria-labelledby="classes-heading"><h2 id="classes-heading"><BookOpen aria-hidden="true" />Class Materials</h2><ul className="class-list">{CLASSES.map(item => <li key={item.url}><a className="class-card" href={item.url}><img src={item.preview} alt="" width={1600} height={900} loading="lazy" /><div><h3>{item.title}</h3><p>{item.summary}</p><span className="class-card-link">View slides <ArrowUpRight size={22} aria-hidden="true" /></span></div></a></li>)}</ul></section>

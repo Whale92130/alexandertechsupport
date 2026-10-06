@@ -21,11 +21,12 @@ export function AboutTile() {
    <div className="about-summary">
     <p>{expanded
      ? "Hi, I am Alexander, the Tech Support Guy. I am committed to helping anyone with any technical issues, whether it is with a phone, laptop, or any other device. I can help with troubleshooting, setting up accounts, changing settings, or any software issue."
-     : "Hi, I am Alexander, the Tech Support Guy. I am committed to ...."}</p>
+     : "Hi, I am Alexander, the Tech Support Guy. I am committed to ..."}</p>
     <div id="about-details" className="about-details" hidden={!expanded}>
      <p>Over the past three years, I have helped hundreds of seniors and people experiencing homelessness with their technology needs. I visit the Gary and Mary Senior Center most Sundays from 11 a.m. to 1 p.m. I also occasionally visit We See You, San Diego, to provide tech support.</p>
      <p>Check the <a href="/visit-schedule">schedule</a> on my website to see when I will be visiting next. If you have any questions about my services or would like to contact me, email me at <a href="mailto:alexandertechhelp@gmail.com">alexandertechhelp@gmail.com</a>.</p>
     </div>
+    {!expanded && " "}
     <button className="about-toggle" type="button" aria-expanded={expanded} aria-controls="about-details" onClick={() => setExpanded(value => !value)}>
      {expanded ? "Show less" : "Show more"}<ToggleIcon size={20} aria-hidden="true" />
     </button>

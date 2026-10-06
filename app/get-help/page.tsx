@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { PageIntro } from "../page-intro";
+import { BackHome } from "../back-home";
 import { EMAIL, FORM_URL } from "@/lib/content";
 export const metadata: Metadata = { title: "Get Help", description: "Ask Alexander a technology question and choose help by video guide, in person, or both." };
 export default function GetHelp() {
  return <main id="main-content" tabIndex={-1}>
+  <BackHome />
   <PageIntro title="Ask Alexander for help"><p>Tell me what you need help with. You do not need to know the technical words.</p></PageIntro>
   <div className="container section content-stack">
    <section className="callout reading-width" id="request-help" aria-labelledby="request-heading"><h2 id="request-heading">Start with a support request</h2><p>Share your name, describe your question, and choose how you would like help.</p><p className="small-note">The button opens the existing Google Form in this tab.</p><a className="button" href={FORM_URL}>Open Support Form</a></section>
