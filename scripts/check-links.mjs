@@ -1,5 +1,5 @@
 import { CLASSES, FORM_URL, APP_URL, CALENDAR_URL, DIRECTIONS_URL } from "../lib/content.ts";
-const urls = [FORM_URL,...CLASSES.map(item=>item.url),APP_URL,CALENDAR_URL,DIRECTIONS_URL,"https://www.sandiego.gov/public-library/san-diego-access-4-all","https://maps.app.goo.gl/5KSEH7fe7i6wT8oTA"];
+const urls = [FORM_URL,...CLASSES.map(item=>item.url),APP_URL,CALENDAR_URL,DIRECTIONS_URL,"https://www.sandiego.gov/digital-navigator-program","https://sdfutures.org/digital-skills-classes-1","https://maps.app.goo.gl/5KSEH7fe7i6wT8oTA"];
 const results = await Promise.all(urls.map(async url => {
  try {
   const response = await fetch(url,{signal:AbortSignal.timeout(20000)});
